@@ -17,7 +17,7 @@ function App() {
         </button>
       </nav>
 
-      {/* Main */}
+      {/* Principal */}
       <div className="flex flex-col" id="main">
         {/* Hero  */}
         <div className="relative flex-shrink-0 text-center py-20 bg-[#464646] bg-cover" style={{ backgroundImage: `url('/fundo.png') no-repeat center center fixed`, backgroundSize: "cover", height: "60vh" }}>
