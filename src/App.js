@@ -4,7 +4,7 @@ function App() {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-4 py-2 bg-[#010101]">
         <div className="flex justify-center items-center">
-          <img src="/logo_sem_nome.png" alt="Logo" className="w-full max-w-sm sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-md h-auto" />
+          <img src="/icons/logo_sem_nome.png" alt="Logo" className="w-full max-w-sm sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-md h-auto" />
         </div>
         <ul className="flex space-x-6">
           <li><a href="#calmwave" className="hover:text-gray-300">Calm Wave</a></li>
@@ -66,13 +66,24 @@ function App() {
       {/* Por Que? */}
       <section id="why" className="h-screen bg-gray-700 flex items-center justify-center text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold">Por Que?</h2>
+          <h2 className="text-3xl font-bold ">
+          <span style={{ color: '#9EBDC1' }}>Por que </span>
+          <span style={{ color: '#5FF0B7' }}>Calm Wave </span>
+          <span style={{ color: '#0CAE93' }}>?</span>
+            </h2>
           <p className="mt-4 text-lg">
-            Explicação.
+          O Transtorno do Espectro Autista(TEA), é uma condição que influencia a forma como uma pessoa se comunica, interage socialmente e se comporta.
+          É caracterizado por diferenças no desenvolvimento cerebral que afetam a maneira como as conexões neurais são formadas e processadas.
+          A hipersensibilidade auditiva em crianças com TEA é caracterizada por uma sensibilidade aumentada aos sons, podendo causar desconforto ou ansiedade.
           </p>
         </div>
+        <div className="max-w-4xl mx-auto">
+        <p className="mt-4 text-lg underline">2 A CADA 1000 CRIANÇAS DIAGNOSTICAM COM AUTISMO<br></br>
+          MAIS DE 90% POSSUEM HIPERSENSIBILIDADE AUDITIVA<br></br>
+          PRINCIPAL BARREIRA NO APRENDIZADO</p>
+        </div>
       </section>
-
+    
       {/* Frequências */}
       <section id="frequencies" className="h-screen bg-gray-800 flex items-center justify-center text-center">
         <div className="max-w-4xl mx-auto">
