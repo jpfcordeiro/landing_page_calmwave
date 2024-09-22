@@ -42,7 +42,7 @@ function App() {
             <h2 className="text-3xl font-bold">Calm Wave</h2>
             <p className="mt-4">Promovendo a inclusão de forma relaxante através da tecnologia.</p>
             <p className="mt-2">
-              Este projeto está sendo desenvolvido pela startup WAI© criada por estudantes da Fatec Registro.
+              Este projeto está sendo desenvolvido pela startup VVAI© criada por estudantes da Fatec Registro.
             </p>
           </div>
         </section>
