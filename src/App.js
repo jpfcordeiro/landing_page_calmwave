@@ -4,7 +4,7 @@ function App() {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-4 py-2 bg-[#010101]">
         <div className="flex justify-center items-center">
-          <img src="/icons/logo_sem_nome.png" alt="Logo" className="w-full max-w-sm sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-md h-auto" />
+          <img src="/logo_sem_nome.png" alt="Logo" className="w-full max-w-sm sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-md h-auto" />
         </div>
         <ul className="flex space-x-6">
           <li><a href="#calmwave" className="hover:text-gray-300">Calm Wave</a></li>
@@ -66,42 +66,53 @@ function App() {
       {/* Por Que? */}
       <section id="why" className="h-screen bg-gray-700 flex items-center justify-center text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold ">
-          <span style={{ color: '#9EBDC1' }}>Por que </span>
-          <span style={{ color: '#5FF0B7' }}>Calm Wave </span>
-          <span style={{ color: '#0CAE93' }}>?</span>
-            </h2>
+          <h2 className="text-3xl font-bold">Por Que?</h2>
           <p className="mt-4 text-lg">
-          O Transtorno do Espectro Autista(TEA), é uma condição que influencia a forma como uma pessoa se comunica, interage socialmente e se comporta.
-          É caracterizado por diferenças no desenvolvimento cerebral que afetam a maneira como as conexões neurais são formadas e processadas.
-          A hipersensibilidade auditiva em crianças com TEA é caracterizada por uma sensibilidade aumentada aos sons, podendo causar desconforto ou ansiedade.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-        <p className="mt-4 text-lg underline">2 A CADA 1000 CRIANÇAS DIAGNOSTICAM COM AUTISMO<br></br>
-          MAIS DE 90% POSSUEM HIPERSENSIBILIDADE AUDITIVA<br></br>
-          PRINCIPAL BARREIRA NO APRENDIZADO</p>
-        </div>
-      </section>
-    
-      {/* Frequências */}
-      <section id="frequencies" className="h-screen bg-gray-800 flex items-center justify-center text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold">Frequências</h2>
-          <p className="mt-4 text-lg">
-          Frequências
+            Explicação.
           </p>
         </div>
       </section>
 
-      {/* Contato */}
-      <section id="contact" className="bg-[#010101] py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold">Contato</h2>
-          <p className="mt-4 text-lg">
-            Informações de contato.
-          </p>
+      {/* Soluções */}
+      <section id="solution" className="h-screen bg-gray-950">
+        {/* div texto */}
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-5xl font-gothic text-custom_cinza">Soluções</h2>
+            <h1 className="text-6xl font-big_shoulder tracking-wide mt-3">Recursos Poderosos</h1>
+            <h1 className="text-6xl font-big_shoulder">Só para Você</h1>
+          </div>
+          {/* div dos três cards */}
+          <div className="flex flex-row gap-20 pt-10">
+            <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden w-96">
+              <img className="w-full h-full object-fill" src="icons/solucoes/iphone15.svg" />
+            </div>
+            <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden w-96">
+              <img className="w-full h-full object-cover" src="icons/solucoes/soundwave.svg" />
+            </div>
+            <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden w-96">
+              <img className="w-full h-full object-fill" src="icons/solucoes/macstudio.svg" />
+            </div>
+          </div>
+          <div class="flex justify-around mt-3">
+            <p class="text-center text-white font-big_shoulder text-4xl">Aplicação</p>
+            <p class="text-center text-white font-big_shoulder text-4xl">Cancelamento de Ruído</p>
+            <p class="text-center text-white font-big_shoulder text-4xl">Inteligência Artificial</p>
+          </div>
+          <div className="text-center">
+            <p className="mt-4 text-base md:text-lg">
+              No final, se espera que nossa tecnologia melhore a qualidade de vida e o bem-estar emocional das crianças com TEA, além de contribuir para a promoção da educação inclusiva, facilitando a participação e o sucesso acadêmico de todas as crianças, independentemente de suas necessidades sensoriais ou cognitivas.
+            </p>
+          </div>
         </div>
+      </section>
+
+
+      {/* Frequências */}
+      <section id="frequencies" class="relative h-screen bg-gray-800 flex items-center justify-center text-center overflow-hidden">
+        {/* Texto de fundo */}
+        <h2 class="absolute inset-0 text-[280px] font-big_shoulder text-white z-1 whitespace-nowrap flex items-center justify-center">
+          Ruídos Calmantes</h2>
       </section>
     </div>
   );
