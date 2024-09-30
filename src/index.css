@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +16,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Define a animação para o carrossel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Aplica a animação para mover os logos */
+.logos-container {
+  display: flex;
+  animation: scroll 50s linear infinite;
+}
+
+/* Limita a área visível e impede que o conteúdo saia */
+.overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
 }

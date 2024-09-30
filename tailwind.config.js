@@ -4,7 +4,11 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        shoulders: ['"Big Shoulders Display"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
