@@ -7,7 +7,13 @@ module.exports = {
     extend: {
       fontFamily: {
         shoulders: ['"Big Shoulders Display"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        gothic: ['"League Gothic"', 'sans-serif'],
       },
+      colors:{
+        custom_cinza: '#9EBDC1',
+        custom_roxo: '5319C6',
+      }
     },
   },
   plugins: [],
