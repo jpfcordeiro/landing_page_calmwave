@@ -1,4 +1,5 @@
 import WaveBackground from "./components/WaveBackground";
+import CardHover from "./components/CardHover";
 
 function App() {
   return (
@@ -227,21 +228,12 @@ function App() {
         className="relative h-screen bg-gray-800 flex items-center justify-center text-center"
       >
         <div className="relative max-w-4xl mx-auto z-10">
-          <h2 className="text-3xl font-bold">Soluções</h2>
-          <p className="mt-4 text-lg">RECURSOS PODEROSOS</p>
-          <p className="mt-4 text-lg">SÓ PARA VOCÊ</p>
-
-          {/* Descrição geral */}
-          <p className="mt-6 text-md">
-            No final, se espera que nossa tecnologia melhore a qualidade de vida
-            e o bem-estar emocional das crianças com TEA, além de contribuir
-            para a promoção da educação inclusiva, facilitando a participação e
-            o sucesso acadêmico de todas as crianças, independentemente de suas
-            necessidades sensoriais ou cognitivas.
-          </p>
+          <h2 className="text-5xl font-gothic text-custom_cinza">Soluções</h2>
+          <p className="text-6xl mt-4 font-shoulders">RECURSOS PODEROSOS</p>
+          <p className="text-6xl mt-4 font-shoulders">SÓ PARA VOCÊ</p>
 
           {/* Cards */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <img
@@ -249,9 +241,8 @@ function App() {
                 alt="Descrição do Card 1"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <h3 className="mt-4 text-xl font-semibold">Título do Card 1</h3>
+              <h3 className="mt-4 text-xl font-semibold">Aplicação Mobile</h3>
             </div>
-
             {/* Card 2 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <img
@@ -259,7 +250,7 @@ function App() {
                 alt="Descrição do Card 2"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <h3 className="mt-4 text-xl font-semibold">Título do Card 2</h3>
+              <h3 className="mt-4 text-xl font-semibold">Cancelamento de Ruído</h3>
             </div>
 
             {/* Card 3 */}
@@ -269,40 +260,42 @@ function App() {
                 alt="Descrição do Card 3"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <h3 className="mt-4 text-xl font-semibold">Título do Card 3</h3>
+              <h3 className="mt-4 text-xl font-semibold">Inteligência artificial</h3>
             </div>
           </div>
+          {/* Descrição geral */}
+          <p className="mt-10 text-lg font-montserrat">
+            No final, se espera que nossa tecnologia melhore a qualidade de vida
+            e o bem-estar emocional das crianças com TEA, além de contribuir
+            para a promoção da educação inclusiva, facilitando a participação e
+            o sucesso acadêmico de todas as crianças, independentemente de suas
+            necessidades sensoriais ou cognitivas.
+          </p>
         </div>
       </section>
 
       {/* Frequências */}
-      <section
-        id="frequencies"
-        className="relative h-screen bg-gray-800 flex items-center justify-center text-center"
-      >
-        <div className="relative max-w-4xl mx-auto z-10">
-          <h2 className="text-3xl font-bold">Frequências</h2>
-          <p className="mt-4 text-lg">Frequências</p>
-        </div>
-      </section>
+          <CardHover />
+   
+
 
       {/* Contato */}
       <section id="contact" className="bg-[#010101] py-3">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="flex justify-between w-full mb-4">
             <div className="text-left">
-              <h2 className="text-3xl font-bold">Contato</h2>
+              <h2 className="text-3xl font-bold font-gothic">Contato</h2>
               <p className="mt-4 text-lg">Informações de contato.</p>
               <p>calmwave2024@outlook.com</p>
               <p>(13) 78945-5658</p>
             </div>
             <div className="text-center mx-auto mt-5">
-              <span className="text-xl font-bold text-white bg-yellow-500 px-4 py-2 rounded">
+              <span className="text-xl font-bold text-white bg-violet-700 px-4 py-2 rounded font-gothic">
                 vvAi Startup
               </span>
             </div>
             <div className="text-right">
-              <span className="text-lg">Redes Sociais</span>
+              <span className="text-lg font-gothic">Redes Sociais</span>
               <div className="flex justify-center mt-4 space-x-4">
                 <a href="#" aria-label="Gmail">
                   <img
@@ -337,7 +330,7 @@ function App() {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 }
 
