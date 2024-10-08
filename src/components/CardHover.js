@@ -47,7 +47,7 @@ const CardHover = () => {
         <div
           key={card.title}
           className={`absolute z-${10 + index} bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 flex flex-row transform transition-transform duration-500 ease-in-out 
-          ${isOutOfScreen[index] ? '-translate-x-full' : 'translate-x-0'}`}
+          ${isOutOfScreen[index] ? '-translate-y-full' : 'translate-y-0'}`}
           onMouseEnter={() => handleMouseEnter(index)} // Alterna o estado ao passar o mouse
         >
           <div className="bg-yellow-100 w-1/2 p-6"></div>

@@ -183,7 +183,7 @@ function App() {
         id="why"
         className="relative h-screen bg-gray-800 flex justify-center text-white"
       >
-        <WaveBackground />
+        {/* <WaveBackground /> */}
         <div className="relative max-w-6xl mx-auto flex items-start mt-20 justify-between z-10">
           {/* Coluna da Esquerda */}
           <div className="w-full md:w-1/2">
