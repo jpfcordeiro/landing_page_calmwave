@@ -38,7 +38,7 @@ const CardHover = () => {
       className="relative h-screen bg-gray-800 flex items-center justify-center text-center overflow-hidden"
     >
       {/* Texto de fundo */}
-      <h2 className="absolute inset-0 text-7xl md:text-[200px] lg:text-[280px] font-shoulders text-white z-1 break-words flex items-center justify-center">
+      <h2 className="absolute inset-0 text-7xl md:text-[200px] lg:text-[230px] font-shoulders text-white z-1 break-words flex items-center justify-center">
         Ruídos Calmantes
       </h2>
 
