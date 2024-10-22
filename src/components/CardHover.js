@@ -50,7 +50,7 @@ const CardHover = () => {
           ${isOutOfScreen[index] ? '-translate-y-full' : 'translate-y-0'}`}
           onMouseEnter={() => handleMouseEnter(index)} // Alterna o estado ao passar o mouse
         >
-          <div className="bg-yellow-100 w-1/2 p-6"></div>
+          <div className="bg-vertical-gradient w-1/2 p-6"></div>
           <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
             <h1 className="text-5xl mb-2 text-center font-gothic">{card.title}</h1>
             <p className="font-montserrat text-lg mt-10">
