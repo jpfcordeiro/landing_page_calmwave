@@ -88,7 +88,7 @@ function App() {
         </div>
 
         {/* Info */}
-        <section id="calmwave" className="py-14 bg-[#ffffff44]">
+        <section id="calmwave" className="py-14 bg-[#ffffff44] rounded">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white">Calm Wave</h2>
             <p className="mt-4 text-white">
@@ -181,10 +181,9 @@ function App() {
       {/* Por Que? */}
       <section
         id="why"
-        className="relative h-screen bg-gray-800 flex justify-center text-white"
+        className="relative h-100 bg-gray-800 flex justify-center text-white"
       >
-        {/* <WaveBackground /> */}
-        <div className="relative max-w-6xl mx-auto flex items-start mt-20 justify-between z-10">
+        <div className="relative max-w-6xl mx-auto flex items-start mt-10 justify-between z-10 mb-20">
           {/* Coluna da Esquerda */}
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl font-bold text-teal-300 mb-4">
@@ -215,7 +214,7 @@ function App() {
               <span>possuem hipersensibilidade auditiva</span>
             </div>
             <div className="border-t border-b border-gray-400 w-3/4 pt-4 text-right pb-4">
-              <span className="text-black px-4 py-3 rounded-md">
+              <span className="px-4 py-3 rounded-md">
                 Principal barreira no aprendizado
               </span>
             </div>
@@ -225,19 +224,19 @@ function App() {
 
       <section
         id="solutions"
-        className="relative h-screen bg-gray-800 flex items-center justify-center text-center"
+        className="relative h-100 bg-gray-800 flex items-center justify-center text-center"
       >
-        <div className="relative max-w-4xl mx-auto z-10">
+        <div className="relative max-w-5xl mx-auto z-10 mt-0 mb-10">
           <h2 className="text-5xl font-gothic text-custom_cinza">Soluções</h2>
-          <p className="text-6xl mt-4 font-shoulders">RECURSOS PODEROSOS</p>
-          <p className="text-6xl mt-4 font-shoulders">SÓ PARA VOCÊ</p>
+          <p className="text-5xl mt-4 font-shoulders">RECURSOS PODEROSOS</p>
+          <p className="text-5xl mt-4 font-shoulders">SÓ PARA VOCÊ</p>
 
           {/* Cards */}
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <img
-                src="/path/to/image1.jpg"
+                src="/icons/solucoes/iphone15.svg"
                 alt="Descrição do Card 1"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
@@ -246,21 +245,25 @@ function App() {
             {/* Card 2 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <img
-                src="/path/to/image2.jpg"
+                src="/icons/solucoes/soundwave.svg"
                 alt="Descrição do Card 2"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <h3 className="mt-4 text-xl font-semibold">Cancelamento de Ruído</h3>
+              <h3 className="mt-4 text-xl font-semibold">
+                Cancelamento de Ruído
+              </h3>
             </div>
 
             {/* Card 3 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <img
-                src="/path/to/image3.jpg"
+                src="/icons/solucoes/macstudio.svg"
                 alt="Descrição do Card 3"
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <h3 className="mt-4 text-xl font-semibold">Inteligência artificial</h3>
+              <h3 className="mt-4 text-xl font-semibold">
+                Inteligência artificial
+              </h3>
             </div>
           </div>
           {/* Descrição geral */}
@@ -275,9 +278,9 @@ function App() {
       </section>
 
       {/* Frequências */}
-          <CardHover />
-   
-
+      <section id="frequencies" className="bg-[#010101] py-3">
+        <CardHover />
+      </section>
 
       {/* Contato */}
       <section id="contact" className="bg-[#010101] py-3">
@@ -330,7 +333,7 @@ function App() {
           </div>
         </div>
       </section>
-    </div >
+    </div>
   );
 }
 
