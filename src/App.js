@@ -44,11 +44,10 @@ function App() {
       <div className="flex flex-col" id="main">
         {/* Hero  */}
         <div
-          className="relative flex flex-row items-center py-20 bg-[#464646] bg-cover"
+          className="relative flex flex-row items-center py-20 bg-[#464646] bg-cover h-80"
           style={{
             backgroundImage: `url('/fundo.png') no-repeat center center fixed`,
             backgroundSize: "cover",
-            height: "60vh",
           }}
         >
           <div className="absolute inset-0 overflow-hidden pr-4">
@@ -87,20 +86,25 @@ function App() {
           </div>
         </div>
 
-        {/* Info */}
-        <section id="calmwave" className="py-14 bg-[#ffffff44] rounded">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white">Calm Wave</h2>
-            <p className="mt-4 text-white">
-              Promovendo a inclusão de forma relaxante através da tecnologia.
-            </p>
-            <p className="mt-2 text-white">
-              Este projeto está sendo desenvolvido pela startup VVAI© criada por
-              estudantes da Fatec Registro.
-            </p>
-          </div>
-        </section>
-
+        <div>
+          {/* Info */}
+          <section
+            id="calmwave"
+            className="py-14 bg-[#ffffff44] rounded opacity-70"
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white">Calm Wave</h2>
+              <p className="mt-4 text-white">
+                Promovendo a inclusão de forma relaxante através da tecnologia.
+              </p>
+              <p className="mt-2 text-white">
+                Este projeto está sendo desenvolvido pela startup VVAI© criada
+                por estudantes da Fatec Registro.
+              </p>
+            </div>
+          </section>
+        </div>
+        
         {/* Footer */}
         <footer className="bg-[#010101] py-6">
           <div className="w-full flex justify-center  overflow-hidden">
