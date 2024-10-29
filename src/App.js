@@ -79,7 +79,7 @@ function App() {
           {/* Imagem do fone à direita */}
           <div className="relative z-10 w-1/2 flex justify-center items-center">
             <img
-              src="/path/to/headphone.png"
+              src="/icons/fone.svg"
               alt="Fone de ouvido"
               className="w-[80%] h-auto"
             />
