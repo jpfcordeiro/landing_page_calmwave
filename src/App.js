@@ -1,4 +1,3 @@
-import WaveBackground from "./components/WaveBackground";
 import CardHover from "./components/CardHover";
 
 function App() {
