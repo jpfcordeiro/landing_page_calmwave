@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="bg-gray-900 text-white min-h-screen flex flex-col">
       {/* Navbar */}
-      <nav className="flex items-center justify-between px-4 py-2 bg-[#010101]">
+      <nav className="flex items-center justify-between px-4 py-2 bg-[#010101] z-10">
         <div className="flex justify-center items-center">
           <img
             src="icons/logo_sem_nome.png"
@@ -77,11 +77,11 @@ function App() {
           </div>
 
           {/* Imagem do fone à direita */}
-          <div className="relative z-10 w-1/2 flex justify-center items-center">
+          <div className="relative w-[50%] mr-auto mt-[200px] flex">
             <img
-              src="/icons/fone.svg"
+              src="/icons/fone.png"
               alt="Fone de ouvido"
-              className="w-[80%] h-auto"
+              className="w-fit h-100 mr-auto"
             />
           </div>
         </div>
@@ -90,9 +90,9 @@ function App() {
           {/* Info */}
           <section
             id="calmwave"
-            className="py-14 bg-[#ffffff44] rounded opacity-70"
+            className="py-14 bg-[#464646]"
           >
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center bg-[#ffffff44] rounded opacity-70">
               <h2 className="text-3xl font-bold text-white">Calm Wave</h2>
               <p className="mt-4 text-white">
                 Promovendo a inclusão de forma relaxante através da tecnologia.
@@ -106,7 +106,7 @@ function App() {
         </div>
         
         {/* Footer */}
-        <footer className="bg-[#010101] py-6">
+        <footer className="bg-[#010101] py-6 z-10">
           <div className="w-full flex justify-center  overflow-hidden">
             <div className="logos-container gap-10 flex items-center animate-scroll">
               <img src="/icons/techs/react.svg" alt="React" className="h-8" />
