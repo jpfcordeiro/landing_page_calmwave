@@ -21,21 +21,21 @@ code {
 /* Define a animação para o carrossel */
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0); /* Começa na posição inicial */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Move até a metade, completando o loop */
   }
 }
 
-/* Aplica a animação para mover os logos */
+/* Configura o contêiner dos logos com a animação de rolagem */
 .logos-container {
   display: flex;
-  animation: scroll 50s linear infinite;
+  animation: scroll 40s linear infinite; /* Animação contínua */
+  white-space: nowrap;
 }
 
 /* Limita a área visível e impede que o conteúdo saia */
 .overflow-hidden {
-  white-space: nowrap;
   overflow: hidden;
 }

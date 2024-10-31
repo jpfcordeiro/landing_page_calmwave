@@ -2,7 +2,7 @@ import CardHover from "./components/CardHover";
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col overflow-hidden">
       {/* Navbar */}
       <nav className="flex items-center justify-between px-4 py-2 bg-[#010101] z-10">
         <div className="flex justify-center items-center">
@@ -39,146 +39,112 @@ function App() {
         </button>
       </nav>
 
-      {/* Principal */}
       <div className="flex flex-col" id="main">
-        {/* Hero  */}
+        {/* Hero */}
         <div
-          className="relative flex flex-row items-center py-20 bg-[#464646] bg-cover h-80"
+          className="relative flex flex-col bg-[#464646] pt-10 bg-cover justify-between h-auto"
           style={{
             backgroundImage: `url('/fundo.png') no-repeat center center fixed`,
             backgroundSize: "cover",
           }}
         >
           <div className="absolute inset-0 overflow-hidden pr-4">
-            <h1 className="text-[35rem] font-bold text-white opacity-5 whitespace-nowrap absolute -top-40 -left-40">
+            <h1 className="h-full text-[35rem] font-bold text-white opacity-25 whitespace-nowrap absolute -top-40 -left-40">
               CALM WAVE
             </h1>
           </div>
 
           <div className="absolute inset-0 bg-[#2C2C2C] bg-opacity-70"></div>
 
-          {/* Texto à esquerda */}
-          <div className="relative z-10 w-1/2 pl-10 text-left">
-            <h1 className="text-5xl font-shoulders text-white">
-              Easier life with <p>Calm Waves</p>
-            </h1>
-            <p className="mt-4 text-md text-white">
-              O fone de ouvido com inteligência artificial
-              <p> voltado para as crianças dentro do Transtorno</p>{" "}
-              <p>do Espectro Autista (TEA) no ambiente pedagógico</p>
-            </p>
-            <a
-              href="#calmwave"
-              className="mt-6 inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500 transition"
-            >
-              Sobre nós
-            </a>
-          </div>
+          {/* Conteúdo principal: Texto à esquerda e imagem do fone */}
+          <div className="relative flex flex-col max-h-screen z-10">
+            <div className="relative flex flex-row justify-between">
+              {/* Texto à esquerda */}
+              <div className="w-full pl-[50px] text-left">
+                <h1 className="text-5xl font-shoulders text-white">
+                  Easier life with <p>Calm Waves</p>
+                </h1>
+                <p className="mt-4 text-sm text-white">
+                  O fone de ouvido com inteligência artificial
+                  <p> voltado para as crianças dentro do Transtorno</p>
+                  <p> do Espectro Autista (TEA) no ambiente pedagógico</p>
+                </p>
+                <a
+                  href="#calmwave"
+                  className="mt-6 inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500 transition"
+                >
+                  Sobre nós
+                </a>
+              </div>
 
-          {/* Imagem do fone à direita */}
-          <div className="relative w-[50%] mr-auto mt-[200px] flex">
-            <img
-              src="/icons/fone.png"
-              alt="Fone de ouvido"
-              className="w-fit h-100 mr-auto"
-            />
+              {/* Imagem do fone à direita */}
+              <div>
+                <img
+                  src="/icons/fone.png"
+                  className="absolute"
+                  alt="Fone de ouvido"
+                />
+              </div>
+            </div>
+
+            {/* Info Section */}
+            <div className="opacity-80 mt-20 h-[160px]">
+              <section id="calmwave" className="p-1 h-[100%] bg-[#2C2C2C] mb-4">
+                <div className="w-[65%] mx-auto text-center flex justify-between bg-[#ffffff44] rounded-xl opacity-90">
+                  <div className="p-1 w-full">
+                    <h3 className="text-xl text-left font-bold text-[#9EBDC1] mb-0">
+                      Calm Wave
+                    </h3>
+                    <p className="text-white w-[300px] text-left text-sm mt-0">
+                      Promovendo a inclusão de forma
+                      <br />
+                      relaxante através da tecnologia.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-white flex-wrap w-[450px] mt-1 text-sm text-left">
+                      Este projeto está sendo desenvolvido pela startup vvai©️
+                      <br /> criada por estudantes da graduação em
+                      Desenvolvimento de Software e <br />
+                      Multiplataforma da Fatec Registro.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            {/* Footer */}
+            <footer className="bg-[#010101] py-6">
+              <div className="w-fit flex justify-center overflow-hidden">
+                <div className="logos-container gap-10 flex items-center animate-scroll">
+                  {[
+                    "react",
+                    "express",
+                    "node",
+                    "js",
+                    "flask",
+                    "machine",
+                    "tensor",
+                    "python",
+                    "arduino",
+                    "rasp",
+                    "kotlin",
+                    "spring",
+                    "java",
+                    "mongo",
+                  ].map((tech, index) => (
+                    <img
+                      key={index}
+                      src={`/icons/techs/${tech}.svg`}
+                      alt={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                      className="h-8"
+                    />
+                  ))}
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
-
-        <div>
-          {/* Info */}
-          <section
-            id="calmwave"
-            className="py-14 bg-[#464646]"
-          >
-            <div className="max-w-4xl mx-auto text-center bg-[#ffffff44] rounded opacity-70">
-              <h2 className="text-3xl font-bold text-white">Calm Wave</h2>
-              <p className="mt-4 text-white">
-                Promovendo a inclusão de forma relaxante através da tecnologia.
-              </p>
-              <p className="mt-2 text-white">
-                Este projeto está sendo desenvolvido pela startup VVAI© criada
-                por estudantes da Fatec Registro.
-              </p>
-            </div>
-          </section>
-        </div>
-        
-        {/* Footer */}
-        <footer className="bg-[#010101] py-6 z-10">
-          <div className="w-full flex justify-center  overflow-hidden">
-            <div className="logos-container gap-10 flex items-center animate-scroll">
-              <img src="/icons/techs/react.svg" alt="React" className="h-8" />
-              <img
-                src="/icons/techs/express.svg"
-                alt="Express"
-                className="h-8"
-              />
-              <img src="/icons/techs/node.svg" alt="Node JS" className="h-8" />
-              <img src="/icons/techs/js.svg" alt="JavaScript" className="h-8" />
-              <img src="/icons/techs/flask.svg" alt="Flask" className="h-8" />
-              <img
-                src="/icons/techs/machine.svg"
-                alt="Machine Learning"
-                className="h-8"
-              />
-              <img
-                src="/icons/techs/tensor.svg"
-                alt="TensorFlow"
-                className="h-8"
-              />
-              <img src="/icons/techs/python.svg" alt="Python" className="h-8" />
-              <img
-                src="/icons/techs/arduino.svg"
-                alt="Arduíno"
-                className="h-8"
-              />
-              <img
-                src="/icons/techs/rasp.svg"
-                alt="Raspberry Pi"
-                className="h-8"
-              />
-              <img src="/icons/techs/kotlin.svg" alt="Kotlin" className="h-8" />
-              <img src="/icons/techs/spring.svg" alt="Spring" className="h-8" />
-              <img src="/icons/techs/java.svg" alt="Java" className="w-10" />
-              <img src="/icons/techs/mongo.svg" alt="MongoDB" className="h-8" />
-              <img src="/icons/techs/react.svg" alt="React" className="h-8" />
-              <img
-                src="/icons/techs/express.svg"
-                alt="Express"
-                className="h-8"
-              />
-              <img src="/icons/techs/node.svg" alt="Node JS" className="h-8" />
-              <img src="/icons/techs/js.svg" alt="JavaScript" className="h-8" />
-              <img src="/icons/techs/flask.svg" alt="Flask" className="h-8" />
-              <img
-                src="/icons/techs/machine.svg"
-                alt="Machine Learning"
-                className="h-8"
-              />
-              <img
-                src="/icons/techs/tensor.svg"
-                alt="TensorFlow"
-                className="h-8"
-              />
-              <img src="/icons/techs/python.svg" alt="Python" className="h-8" />
-              <img
-                src="/icons/techs/arduino.svg"
-                alt="Arduíno"
-                className="h-8"
-              />
-              <img
-                src="/icons/techs/rasp.svg"
-                alt="Raspberry Pi"
-                className="h-8"
-              />
-              <img src="/icons/techs/kotlin.svg" alt="Kotlin" className="h-8" />
-              <img src="/icons/techs/spring.svg" alt="Spring" className="h-8" />
-              <img src="/icons/techs/java.svg" alt="Java" className="w-10" />
-              <img src="/icons/techs/mongo.svg" alt="MongoDB" className="h-8" />
-            </div>
-          </div>
-        </footer>
       </div>
 
       {/* Por Que? */}
@@ -296,7 +262,7 @@ function App() {
               <p>(13) 78945-5658</p>
             </div>
             <div className="text-center mx-auto mt-5">
-              <span className="text-xl font-bold text-white bg-violet-700 px-4 py-2 rounded font-gothic">
+              <span className="text-xl text-white bg-violet-700 px-4 py-2 rounded font-gothic">
                 vvAi Startup
               </span>
             </div>
