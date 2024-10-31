@@ -81,7 +81,6 @@ function App() {
               <div>
                 <img
                   src="/icons/fone.png"
-                  className="absolute"
                   alt="Fone de ouvido"
                 />
               </div>
