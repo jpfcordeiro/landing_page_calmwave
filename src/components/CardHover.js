@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import blurImage from './blur.png'; // Importando a imagem
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import blurImage from './blur.png';
 
 const CardHover = () => {
   const cards = [
@@ -20,90 +20,47 @@ const CardHover = () => {
     },
   ];
 
-  const [visibleCardCount, setVisibleCardCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false); // Estado para verificar se a seção está visível
-  const sectionRef = useRef(null); // Referência para a seção
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Verifica se a seção está visível
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      },
-      {
-        threshold: 0.1, // 10% da seção deve estar visível
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current); // Observa a seção
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current); // Para de observar quando o componente é desmontado
-      }
-    };
-  }, []);
-
-  const handleScroll = (event) => {
-    event.preventDefault();
-    const direction = event.deltaY > 0 ? 'down' : 'up';
-
-    if (isVisible) { // Apenas se a seção estiver visível
-      setVisibleCardCount((prevCount) => {
-        if (direction === 'down' && prevCount < cards.length - 1) {
-          return prevCount + 1;
-        } else if (direction === 'up' && prevCount > 0) {
-          return prevCount - 1;
-        }
-        return prevCount;
-      });
-    }
-  };
-
   return (
-    <section
-      id="frequencies"
-      className="relative h-screen flex items-center justify-center text-center overflow-hidden"
-      onWheel={handleScroll}
-      ref={sectionRef} // Adiciona a referência à seção
-    >
-      {/* Div para imagem de fundo com blur usando a imagem importada */}
-      <div
-        className="absolute inset-0 bg-cover bg-center filter blur-md z-0"
-        style={{ backgroundImage: `url(${blurImage})` }}
-      ></div>
+    <section id="parallax-section" className="relative overflow-hidden min-h-screen">
+      <Parallax pages={2} className="w-full h-full">
+        {/* Camada da Imagem de Fundo e Texto */}
+        <ParallaxLayer offset={0} speed={0.1} sticky={{ start: 0, end: 2.5 }}>
+          <div
+            className="absolute inset-0 bg-cover bg-center filter blur-md z-0"
+            style={{ backgroundImage: `url(${blurImage})` }}
+          ></div>
+          <h2 className="relative text-7xl md:text-[200px] lg:text-[220px] font-shoulders text-white text-center z-10 pt-20">
+            Ruídos Calmantes
+          </h2>
+        </ParallaxLayer>
 
-      {/* Texto de fundo */}
-      <h2 className="absolute inset-0 text-7xl md:text-[200px] lg:text-[220px] font-shoulders text-white z-0 break-words flex items-center justify-center">
-        Ruídos Calmantes
-      </h2>
-
-      {/* Cartões */}
-      {cards.map((card, index) => (
-        <div
-          key={card.title}
-          className={`absolute bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 flex flex-row transition-transform duration-500 ease-in-out`}
-          style={{
-            left: '50%',
-            top: '50%', // Centraliza verticalmente
-            transform: `translate(-50%, ${index - visibleCardCount} * 100%)`, // Move os cards para cima
-            opacity: index <= visibleCardCount ? 1 : 0, // Tornar invisível os cards que não estão na fila
-            zIndex: index <= visibleCardCount ? 10 : 0,
-          }}
-        >
-          <div className="bg-vertical-gradient w-1/2 p-6"></div>
-          <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
-            <h1 className="text-5xl mb-2 text-center font-gothic">{card.title}</h1>
-            <p className="font-montserrat text-lg mt-10">{card.description}</p>
-          </div>
-        </div>
-      ))}
+        {/* Camada dos Cartões */}
+        <ParallaxLayer offset={1} speed={1}>
+          <section
+            id="frequencies"
+            className="relative h-screen flex flex-col items-center justify-center text-center overflow-visible"
+          >
+            {/* Cartões empilhados */}
+            <div className="z-10 flex flex-col items-center space-y-8">
+              {cards.map((card, index) => (
+                <div
+                  key={card.title}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 flex flex-row mb-4 transition-transform duration-500 transform"
+                  style={{
+                    transform: `translateY(${index * 20}px)`,
+                  }}
+                >
+                  <div className="bg-vertical-gradient w-1/2 p-6"></div>
+                  <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
+                    <h1 className="text-5xl mb-2 text-center font-gothic">{card.title}</h1>
+                    <p className="font-montserrat text-lg mt-10">{card.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </ParallaxLayer>
+      </Parallax>
     </section>
   );
 };
