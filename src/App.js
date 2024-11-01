@@ -78,10 +78,11 @@ function App() {
               </div>
 
               {/* Imagem do fone à direita */}
-              <div>
+              <div className="absolute right-0 top-0 h-full">
                 <img
                   src="/icons/fone.png"
                   alt="Fone de ouvido"
+                  className="h-auto w-[50%] ml-auto"
                 />
               </div>
             </div>
@@ -113,7 +114,7 @@ function App() {
             </div>
 
             {/* Footer */}
-            <footer className="bg-[#010101] py-6">
+            <footer className="bg-[#010101] py-6 z-10">
               <div className="w-fit flex justify-center overflow-hidden">
                 <div className="logos-container gap-10 flex items-center animate-scroll">
                   {[
@@ -149,7 +150,7 @@ function App() {
       {/* Por Que? */}
       <section
         id="why"
-        className="relative h-100 bg-gray-800 flex justify-center text-white"
+        className="relative h-100 bg-gray-800 flex justify-center text-white z-10"
       >
         <div className="relative max-w-6xl mx-auto flex items-start mt-10 justify-between z-10 mb-20">
           {/* Coluna da Esquerda */}
@@ -193,6 +194,12 @@ function App() {
       <section
         id="solutions"
         className="relative h-100 bg-gray-800 flex items-center justify-center text-center"
+        style={{
+          backgroundImage: `url('/icons/solucoes/fundo.svg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <div className="relative max-w-5xl mx-auto z-10 mt-0 mb-10">
           <h2 className="text-5xl font-gothic text-custom_cinza">Soluções</h2>
