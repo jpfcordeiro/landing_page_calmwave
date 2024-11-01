@@ -253,9 +253,9 @@ function App() {
       </section>
 
       {/* Frequências */}
-      <section id="frequencies" className="bg-[#010101] py-3">
+      <div className="bg-[#010101] relative-h-screen">
         <CardHover />
-      </section>
+      </div>
 
       {/* Contato */}
       <section id="contact" className="bg-[#010101] py-3">
