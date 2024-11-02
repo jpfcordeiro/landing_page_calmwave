@@ -253,7 +253,7 @@ function App() {
       </section>
 
       {/* Frequências */}
-      <div className="bg-[#010101] relative-h-screen">
+      <div className="bg-gray-800 h-screen">
         <CardHover />
       </div>
 
