@@ -21,7 +21,7 @@ const CardHover = () => {
         {/* Cartão 1 - Ruído Branco */}
         <ParallaxLayer speed={1.0} sticky={{ start: 1.0, end: 3.0 }}>
           <div className="relative flex justify-center items-center">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-1/3 flex flex-row transition-transform duration-500 transform">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
               <div className="bg-vertical-gradient w-1/2 p-6"></div>
               <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
                 <h1 className="text-4xl mb-2 text-center font-gothic">Ruído Branco</h1>
@@ -36,7 +36,7 @@ const CardHover = () => {
         {/* Cartão 2 - Ruído Rosa */}
         <ParallaxLayer speed={1.0} sticky={{ start: 1.8, end: 3.0 }}>
           <div className="relative flex justify-center items-center">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-1/3 flex flex-row transition-transform duration-500 transform">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
               <div className="bg-vertical-gradient w-1/2 p-6"></div>
               <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
                 <h1 className="text-4xl mb-2 text-center font-gothic">Ruído Rosa</h1>
@@ -51,7 +51,7 @@ const CardHover = () => {
         {/* Cartão 3 - Ruído Marrom */}
         <ParallaxLayer speed={1.0} sticky={{ start: 2.6, end: 2.0 }}>
           <div className="relative flex justify-center items-center">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-1/3 flex flex-row transition-transform duration-500 transform">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
               <div className="bg-vertical-gradient w-1/2 p-6"></div>
               <div className="bg-zinc-800 w-1/2 p-6 text-white text-wrap text-left">
                 <h1 className="text-4xl mb-2 text-center font-gothic">Ruído Marrom</h1>
